@@ -1,3 +1,5 @@
+.settings
+bin
 out
 .idea
 .gradle
