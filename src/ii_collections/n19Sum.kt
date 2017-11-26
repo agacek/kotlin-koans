@@ -5,8 +5,9 @@ fun example6() {
     listOf("a", "b", "cc").sumBy { it.length } == 4
 }
 
+val Order.totalPrice
+	get() = products.sumByDouble { it.price }
+
 fun Customer.getTotalOrderPrice(): Double {
-    // Return the sum of prices of all products that a customer has ordered.
-    // Note: a customer may order the same product for several times.
-    todoCollectionTask()
+	return orders.sumByDouble { it.totalPrice }
 }
